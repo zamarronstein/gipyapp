@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Desarrollo
+  labels:
+    app: Desarrollo
+  namespace: namespace-workflow-1698217043299
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: Desarrollo
+  template:
+    metadata:
+      labels:
+        app: Desarrollo
+    spec:
+      containers:
+        - name: Desarrollo
+          image: zamaclusterregistry2.azurecr.io/zamaclusterregistry2:latest
+          ports:
+            - containerPort: 3000
