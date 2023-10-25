@@ -6,10 +6,10 @@ name: Desarrollo
     workflow_dispatch: {}
 env:
     ACR_RESOURCE_GROUP: DefaultResourceGroup-EUS
-    AZURE_CONTAINER_REGISTRY: ZamaClusterregistry
+    AZURE_CONTAINER_REGISTRY: ZamaClusterRegistry2
     CLUSTER_NAME: ZamaCluster
     CLUSTER_RESOURCE_GROUP: DefaultResourceGroup-EUS
-    CONTAINER_NAME: image-workflow-1698214500991
+    CONTAINER_NAME: image-workflow-1698215302832
     DEPLOYMENT_MANIFEST_PATH: |
         manifests/deployment.yaml
         manifests/service.yaml
@@ -62,4 +62,4 @@ jobs:
                 action: deploy
                 images: ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_NAME }}:${{ github.sha }}
                 manifests: ${{ env.DEPLOYMENT_MANIFEST_PATH }}
-                namespace: namespace-workflow-1698214500991
+                namespace: namespace-workflow-1698215302832
