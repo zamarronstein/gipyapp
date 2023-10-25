@@ -4,7 +4,7 @@ metadata:
   name: Desarrollo
   labels:
     app: Desarrollo
-  namespace: namespace-workflow-1698214500991
+  namespace: namespace-workflow-1698215302832
 spec:
   replicas: 1
   selector:
@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: Desarrollo
-          image: zamaclusterregistry.azurecr.io/image-workflow-1698214500991:latest
+          image: ZamaClusterRegistry2.azurecr.io/image-workflow-1698215302832:latest
           ports:
             - containerPort: 3000
