@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: desarrollo
+  labels:
+    app: desarrollo
+  namespace: namespace-workflow-1698217950239
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: desarrollo
+  template:
+    metadata:
+      labels:
+        app: desarrollo
+    spec:
+      containers:
+        - name: desarrollo
+          image: acrworkflow1698217950239.azurecr.io/image-workflow-1698217950239:latest
+          ports:
+            - containerPort: 3000
